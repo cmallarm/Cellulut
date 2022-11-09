@@ -4,9 +4,9 @@
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
 
-    AutoCell fenetre;
-    fenetre.setWindowTitle("Cellul'UT");
-    fenetre.show();
+    AutoCell window;
+    window.setWindowTitle("Cellul'UT");
+    window.show();
 
     return app.exec();
 }

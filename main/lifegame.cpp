@@ -101,7 +101,7 @@ WindowLG::WindowLG(QWidget* parent, int dim, int sp) : QWidget(parent), dimensio
     connect(alea, SIGNAL(valueChanged(int)), aleaSlide, SLOT(setValue(int)));
     connect(aleaSlide, SIGNAL(valueChanged(int)), alea, SLOT(setValue(int)));
 
-    connect(speedBox, SIGNAL(valueChanged(int)), this, SLOT(maj_vit()));
+    connect(speedBox, SIGNAL(valueChanged(int)), this, SLOT(maj_speed()));
 
     connect(simulationButton, SIGNAL(clicked()), this, SLOT(simulate()));
     connect(aleaSlide, SIGNAL(valueChanged(int)), this, SLOT(maj_alea()));
@@ -109,7 +109,7 @@ WindowLG::WindowLG(QWidget* parent, int dim, int sp) : QWidget(parent), dimensio
     connect(stopButton, SIGNAL(clicked()), this, SLOT(stop()));
     connect(modeAutoButton, SIGNAL(clicked()), this, SLOT(modeAuto()));
     connect(resetButton, SIGNAL(clicked()), this, SLOT(reset()));
-    connect(previousButton, SIGNAL(clicked()), this, SLOT(back()));
+    connect(previousButton, SIGNAL(clicked()), this, SLOT(previous()));
     connect(newButton, SIGNAL(clicked()), this, SLOT(news()));
 
     connect(states, SIGNAL(clicked(const QModelIndex&)), this, SLOT(nextState(const QModelIndex&)));

@@ -27,7 +27,8 @@ AutoCell::AutoCell(QWidget* parent, int dim) : QWidget(parent), dimension(dim) {
 }
 
 void AutoCell::setLifeGame(){
-    WindowLG *window = new WindowLG(nullptr, dim_->value());
+    int dimension = dim_->value();
+    WindowLG *window = new WindowLG(nullptr, dimension);
     window->setWindowTitle("Life Game");
     window->show();
 
